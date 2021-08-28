@@ -1,0 +1,15 @@
+{
+  "name": "project-air-api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/FarizF/ATC-trainer",
+  "author": "Fariz Fakkel, Sven Hillenaar, Sergio Hoogvliets",
+  "license": "MIT",
+  "type": "module",
+  "devDependencies": {
+    "express": "^4.17.1"
+  },
+  "dependencies": {
+    "mongoose": "^6.0.2"
+  }
+}
