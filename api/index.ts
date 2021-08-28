@@ -1,5 +1,5 @@
 import express from 'express';
-import mongoose, { ConnectOptions } from 'mongoose';
+import { connect, ConnectOptions } from 'mongoose';
 import { FlightModel } from './model/flight';
 
 const airApi = express();
@@ -15,7 +15,7 @@ airApi.listen(port, () => {
 });
 
 try {
-	mongoose.connect(
+	connect(
 		uri,
         { useNewUrlParser: true, useUnifiedTopology: true } as ConnectOptions,
         () => { console.log('connected'); }
