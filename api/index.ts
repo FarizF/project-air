@@ -3,7 +3,7 @@ import { connect, ConnectOptions } from 'mongoose';
 import { FlightModel } from './model/flight';
 
 const airApi = express();
-const port = 3000;
+const port = 9001;
 const uri = 'mongodb+srv://admin:admin@maincluster.8vlyz.mongodb.net/ProjectAir?retryWrites=true&w=majority';
 
 airApi.get('/', (req, res) => {
