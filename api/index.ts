@@ -1,6 +1,6 @@
 import express, { response } from "express";
-import mongoose from "mongoose";
-import { FlightModel } from "./model/flight.js";
+import mongoose, { ConnectOptions } from "mongoose";
+import { FlightModel } from "./model/flight";
 
 const airApi = express();
 const port = 3000;
@@ -17,7 +17,7 @@ airApi.listen(port, () => {
 try {
     mongoose.connect(
         uri,
-        { useNewUrlParser: true, useUnifiedTopology: true },
+        { useNewUrlParser: true, useUnifiedTopology: true } as ConnectOptions,
         () => { 
             console.log("connected");
         }
@@ -28,6 +28,6 @@ try {
 
 airApi.get("/flights", (req, res) => {
     FlightModel.find({})
-        .then(model => { res.json(model) })
-        .catch(error => { res.json(error) })
+        .then((model: any) => { res.json(model) })
+        .catch((error: any) => { res.json(error) })
 });
