@@ -6,8 +6,8 @@ interface Flight {
 }
 
 const schema = new Schema<Flight>({
-    flightid: { type: String, required: true },
-    airport: { type: String, required: true }
+	flightid: { type: String, required: true },
+	airport: { type: String, required: true }
 });
 
 export const FlightModel = model('flight', schema);
