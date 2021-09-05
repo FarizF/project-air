@@ -1,2 +1,2 @@
 # ATC-trainer
- A web-based air traffic management simcade
+ A web-based multiplayer airline management game.

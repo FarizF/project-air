@@ -1,13 +1,21 @@
-import { model, Schema } from  'mongoose';
+import { model, Schema } from 'mongoose';
 
-interface Flight {
-    flightid: { type: string },
-    airport: { type: string }
+export interface Flight {
+	id: string,
+	flightNumber: string,
+	airport: string,
+	passengers: number,
+	cargoKg: number,
+	aircraftTypeId: number
 }
 
 const schema = new Schema<Flight>({
-	flightid: { type: String, required: true },
-	airport: { type: String, required: true }
+	id: { type: String, required: true },
+	flightNumber: { type: String, required: true },
+	airport: { type: String, required: true },
+	passengers: { type: Number, required: true },
+	cargoKg: { type: Number, required: true },
+	aircraftTypeId: { type: Number,  required: false }
 });
 
-export const FlightModel = model('flight', schema);
+export const flightModel = model('Flight', schema);
